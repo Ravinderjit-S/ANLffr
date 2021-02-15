@@ -814,7 +814,7 @@ def mtspecraw(x, params, verbose=None, bootstrapMode=False):
         bootstrapMode = False
 
     logger.info('Running Multitaper Raw Spectrum Estimation')
-    x = x.squeeze()
+    x = x.squeeze()  # comment out for single-trial computation - R.S.
     if(len(x.shape) == 3):
         timedim = 2
         trialdim = 1
